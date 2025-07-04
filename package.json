@@ -16,6 +16,9 @@
     "name": "Lucas Felipe",
     "email": "lucasfelipe3000@gmail.com"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^3.3.0",
