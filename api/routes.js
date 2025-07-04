@@ -2,6 +2,8 @@ import Router from '@koa/router'
 import { PrismaClient } from '@prisma/client'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const router = new Router()
 
@@ -82,6 +84,8 @@ router.post('/signup', async ctx=> {
         }
     })
 
+    console.log('user', user)
+
      const accessToken = jwt.sign({
             sub: user.id
         }, process.env.JWT_SECRET,  { expiresIn: '24h' })
@@ -100,6 +104,7 @@ router.post('/signup', async ctx=> {
             ctx.body = "E-mail ou usuário de email já existente"
             return
         }
+        console.log('error', error)
 
         ctx.status = 500
         ctx.body = "Internal error"
