@@ -12,7 +12,7 @@ Uma API REST minimalista que simula funcionalidades semelhantes às do Twitter, 
 
 ⚙️ Tecnologias utilizadas
 
-- Node.js + Express para o servidor e roteamento
+- Node.js + KoaJS para o servidor e roteamento
 
 - PostgreSQL para gerenciamento de dados
 
